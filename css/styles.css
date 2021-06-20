@@ -269,6 +269,22 @@ section {
   height: 70vh;
 }
 
+.video {
+  background: url(../images/bg-subscribe.jpg) no-repeat fixed center center /
+    cover rgba(0, 0, 0, 0);
+  padding: 0px;
+  min-height: 430px;
+}
+
+.video1 {
+  padding-top: 10%;
+  width: 50%;
+}
+.video2 {
+  padding-top: 10%;
+  padding-bottom: 10%;
+  width: 50%;
+}
 /* CONTACT */
 
 #contact .button-leweb {
@@ -376,22 +392,39 @@ section {
 
 /* Medium devices (desktops, 992px and up) */
 
-.navbar {
+.topheader {
   height: 60px;
   width: 100%;
-  background-color: #f1f1f1;
+  background-color: hsl(0, 0%, 95%);
   padding: 5px 10px;
   position: fixed;
   top: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   transition: top 0.5s;
   -moz-transition: top 0.5s;
   -webkit-transition: top 0.5s;
   -o-transition: top 0.5s;
 }
 
+.topheader-left {
+  justify-self: start;
+}
+
+/* Float the link section to the right */
+.topheader-right {
+  justify-self: end;
+}
+/* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
+.topheader a.logo {
+  font-size: 25px;
+  font-weight: bold;
+}
 /* Style the header links */
-.navbar a {
-  float: left;
+.topheader a {
+  /* float: left; */
   color: black;
   text-align: center;
   padding: 12px;
@@ -401,27 +434,16 @@ section {
   border-radius: 4px;
 }
 
-/* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
-.navbar a.logo {
-  font-size: 25px;
-  font-weight: bold;
-}
-
 /* Change the background color on mouse-over */
-.navbar a:hover {
+.topheader a:hover {
   background-color: #ddd;
   color: black;
 }
 
 /* Style the active/current link*/
-.navbar a.active {
+.topheader a.active {
   background-color: dodgerblue;
   color: white;
-}
-
-/* Float the link section to the right */
-.navbar-right {
-  float: right;
 }
 
 /* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
@@ -439,7 +461,7 @@ section {
     padding-left: 0;
   }
   .navbar {
-    padding: flex;
+    display: flex;
     z-index: 1;
   }
   .navbar a {
